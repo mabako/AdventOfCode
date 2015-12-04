@@ -1,7 +1,8 @@
 require 'digest'
 
+@input = IO.read('input.txt').strip
 def hash(num)
-  Digest::MD5.hexdigest("bgvyzdsv#{num}")
+  Digest::MD5.hexdigest("#{@input}#{num}")
 end
 
 def find_hash(prefix)
@@ -10,8 +11,7 @@ def find_hash(prefix)
   }.first
 end
 
-adventcoin = find_hash('00000')
-puts "Adventcoin with five zeroes found at block #{adventcoin} with hash #{hash(adventcoin)}"
-
-adventcoin = find_hash('000000')
-puts "Adventcoin with six zeroes found at block #{adventcoin} with hash #{hash(adventcoin)}"
+(5..6).each { |num|
+  adventcoin = find_hash('0' * num)
+  puts "Adventcoin with #{num} zeroes found at block #{adventcoin} with hash #{hash(adventcoin)}"
+}

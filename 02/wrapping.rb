@@ -1,7 +1,7 @@
-input = IO.readlines("input.txt")
+input = IO.readlines('input.txt')
 
 def dimensions(line)
-  line.split("x").map(&:to_i)
+  line.split('x').map(&:to_i)
 end
 
 def calculate_wrapping(line)

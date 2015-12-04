@@ -1,3 +1,3 @@
-input = IO.read("input.txt")
+input = IO.read('input.txt')
 
-puts "You are now on floor #{input.count("(") - input.count(")")}"
+puts "You are now on floor #{input.count('(') - input.count(')')}"

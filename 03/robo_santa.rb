@@ -2,14 +2,14 @@ santa_position = [0, 0]
 robo_santa_position = [0, 0]
 @visited = { santa_position => true, robo_santa_position => true }
 
-input = IO.read("input.txt")
+input = IO.read('input.txt')
 
 def move(instruction, position)
   case instruction
-  when "<" then position[0] -= 1
-  when ">" then position[0] += 1
-  when "^" then position[1] -= 1
-  when "v" then position[1] += 1
+  when '<' then position[0] -= 1
+  when '>' then position[0] += 1
+  when '^' then position[1] -= 1
+  when 'v' then position[1] += 1
   end
 
   @visited[position.clone] = true
