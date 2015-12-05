@@ -1,9 +1,9 @@
 def pair_of_letters_twice?(str)
-  !(str =~ /(.)(.)(.*)\1\2/).nil?
+  !(str =~ /(..).*\1/).nil?
 end
 
 def one_letter_between?(str)
-  !(str =~ /(.)(.)\1/).nil?
+  !(str =~ /(.).\1/).nil?
 end
 
 def nice?(str)
